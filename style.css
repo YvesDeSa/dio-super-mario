@@ -12,12 +12,36 @@ body {
   justify-content: center;
 }
 
+@keyframes pulsate {
+  0% {
+    box-shadow:
+      0 0 80px blue,
+      0 0 100px aqua;
+  }
+}
+
 .background {
   width: 50%;
   height: 40%;
   margin: auto 0;
   border-radius: 25px;
   background-color: blue;
+
+  animation: pulsate 1s infinite;
+}
+
+.game-over {
+  width: 50%;
+  height: 40%;
+  margin: auto 0;
+  border-radius: 25px;
+  background-color: red;
+  text-align: center;
+}
+
+.game-over h2 {
+  margin-top: 10%;
+  font: 46px Arial;
 }
 
 .mario {

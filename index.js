@@ -49,9 +49,9 @@ function createKoopa() {
     if (koopaPosition < 22) {
       clearInterval(leftInterval);
       background.removeChild(koopa);
-    } else if (koopaPosition > 0 && koopaPosition < 22) {
-      // clearInterval(leftInterval);
-      // document.body.innerHTML = '<h1 class="game-over" >Game Over</>'
+    } else if (koopaPosition > 25 && koopaPosition < 30 && position < 35) {
+      clearInterval(leftInterval);
+      document.body.innerHTML = '<div class="game-over"> <h2>Game Over</h2> </div>'
     } else {
       koopaPosition -= 0.8;
       koopa.style.left = koopaPosition + '%';
