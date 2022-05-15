@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Slab:wght@400;500&display=swap');
+
 * {
   margin: 0;
   border: 0;
@@ -8,26 +10,39 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
 
   justify-content: center;
 }
 
-@keyframes pulsate {
-  0% {
-    box-shadow:
-      0 0 80px blue,
-      0 0 100px aqua;
+@keyframes sliderigth {
+  from {
+    background-position: 70000%;
+  }
+
+  to {
+    background-position: 0;
   }
 }
+
 
 .background {
   width: 50%;
   height: 40%;
   margin: auto 0;
   border-radius: 25px;
-  background-color: blue;
+  background-color: #87ceeb;
+  border: 5px solid #111;
+}
 
-  animation: pulsate 1s infinite;
+.chao {
+  width: 100%;
+  height: 8%;
+  margin-top: 37vh;
+  border-radius: 0 0 20px 20px;
+  background-image: url(./img/chao.jpg);
+  background-repeat: repeat-x;
 }
 
 .game-over {
@@ -35,29 +50,43 @@ body {
   height: 40%;
   margin: auto 0;
   border-radius: 25px;
-  background-color: red;
-  text-align: center;
+  background-color: #000;
+  border: 5px solid #000;
 }
 
 .game-over h2 {
-  margin-top: 10%;
-  font: 46px Arial;
+  margin-top: 15%;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 56px;
+  color: #fff;
 }
 
 .mario {
-  width: 5%;
-  height: 5%;
+  width: 32px;
+  height: 40px;
   margin-left: 5%;
-  bottom: 30%;
+  bottom: 33%;
   position: absolute;
-  background-color: red;
 }
 
-.koopa {
-  width: 5%;
-  height: 5%;
+.mario-parado {
+  background: url("./img/mario/mario-parado.png");
+}
+
+.mario-andando {
+  background: url("./img/mario/mario-andando1.png");
+}
+
+.mario-saltando {
+  background: url("./img/mario/mario-saltando.png");
+}
+
+.tube {
+  width: 32px;
+  height: 55px;
   margin-left: 5%;
-  bottom: 30%;
+  bottom: 33%;
   position: absolute;
-  background-color: blueviolet;
+  background-image: url("./img/tube.png");
 }
